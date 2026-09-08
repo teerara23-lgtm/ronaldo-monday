@@ -1,19 +1,18 @@
-# Ronaldo Monday Greeting Website
+# Ronaldo Monday Greeting Website ⚽
 
-เว็บการ์ดอวยพร “สวัสดีวันจันทร์” ธีม Cristiano Ronaldo / CR7 พร้อมเอฟเฟกต์และปุ่มสุ่มคำอวยพร
+เว็บไซต์สวัสดีวันจันทร์ธีม Cristiano Ronaldo / CR7 สำหรับ GitHub Pages
 
-## เปิดใช้งาน
-ดับเบิลคลิก `index.html` หรืออัปโหลดไฟล์ทั้งหมดขึ้น GitHub repository แล้วเปิดด้วย GitHub Pages
+## ฟีเจอร์
+- 👋 เอฟเฟกต์ Ronaldo โบกมือ
+- ⚽ ลูกฟุตบอลลอยและมีปุ่มเตะ
+- ✨ ปุ่มสุ่มคำอวยพร
+- 📅 คำอวยพรเปลี่ยนตามวันอัตโนมัติ
+- 💫 แสงวิ่งและประกายตกแต่ง
+- 📱 Responsive สำหรับมือถือ
 
 ## GitHub Pages
-1. สร้าง Repository ใหม่บน GitHub
-2. อัปโหลด `index.html`, `style.css`, `script.js`, `README.md`
-3. ไปที่ **Settings → Pages**
-4. เลือก **Deploy from a branch → main → / (root)**
-5. กด Save แล้วรอ GitHub สร้างเว็บไซต์
+อัปโหลดไฟล์ 4 ไฟล์ไว้ที่ root ของ repository แล้วตั้ง Pages เป็น `main` + `/ (root)`
 
-## รูปภาพ
-ภาพ Cristiano Ronaldo ที่ใช้ในเว็บมาจาก Wikimedia Commons/Flickr และอยู่ภายใต้ CC BY-SA 2.0 ตามหน้าต้นทาง:
+## เครดิตภาพ
+ภาพ Cristiano Ronaldo จาก Wikimedia Commons / Flickr โดย Jan S0L0 ภายใต้ CC BY-SA 2.0:
 https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_(4199912028).jpg
-
-ผู้สร้างภาพ: Jan S0L0

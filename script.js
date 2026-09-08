@@ -1,4 +1,8 @@
-const date = new Date();
-document.getElementById('date').textContent = date.toLocaleDateString('th-TH',{day:'numeric',month:'long',year:'numeric'});
-const quotes=['ขอให้สัปดาห์นี้มีแต่เรื่องดี ๆ และความสำเร็จ 💙','เริ่มต้นใหม่ได้เสมอ ลุยให้เต็มที่ในวันจันทร์นี้! ⚡','เชื่อมั่นในตัวเอง แล้วก้าวไปข้างหน้าแบบแชมป์ 🏆'];
-document.getElementById('wishBtn').addEventListener('click',()=>{document.getElementById('quote').textContent='“'+quotes[Math.floor(Math.random()*quotes.length)]+'”';});
+const wishes=["เริ่มวันใหม่ด้วยความมุ่งมั่น แล้วทำให้วันนี้ดีที่สุด","ขอให้วันจันทร์นี้เปิดทางให้กับโอกาสดี ๆ และความสำเร็จ","เหนื่อยได้ แต่ห้ามยอมแพ้ เดินหน้าทีละก้าวเหมือนแชมป์","ขอให้ทุกความพยายามของคุณเปลี่ยนเป็นผลลัพธ์ที่น่าภูมิใจ","เริ่มสัปดาห์ด้วยรอยยิ้ม แล้วจบสัปดาห์ด้วยความสำเร็จ","วันนี้อาจเป็นแค่วันจันทร์ แต่คุณสร้างสิ่งพิเศษได้ตั้งแต่วันนี้","ขอให้มีพลังบวกเต็มร้อย งานราบรื่น และมีข่าวดีเข้ามา","ลุยให้สุด! เป้าหมายใหญ่เริ่มต้นจากก้าวเล็ก ๆ ในวันนี้","เชื่อในตัวเอง ทำเต็มที่ และอย่าลืมพักเมื่อจำเป็น","Monday mindset: Focus, Believe, Work hard, Never give up!"];
+const wishBtn=document.getElementById("wishBtn"),wishText=document.getElementById("wishText"),wishBox=document.getElementById("wishBox"),dailyWish=document.getElementById("dailyWish"),dayLabel=document.getElementById("dayLabel"),football=document.getElementById("football"),ballBtn=document.getElementById("ballBtn");
+function dayIndex(){const d=new Date();return Math.floor(new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()/86400000)}
+function showWish(text){wishBox.classList.remove("wish-pop");void wishBox.offsetWidth;wishBox.classList.add("wish-pop");wishText.textContent=text}
+function randomWish(){let next=wishes[Math.floor(Math.random()*wishes.length)];if(wishes.length>1&&next===wishText.textContent)next=wishes[(wishes.indexOf(next)+1)%wishes.length];showWish(next)}
+const todayWish=wishes[Math.abs(dayIndex())%wishes.length];showWish(todayWish);dailyWish.textContent=todayWish;
+const now=new Date();dayLabel.textContent=now.toLocaleDateString("th-TH",{weekday:"long",day:"numeric",month:"long",year:"numeric"});wishBtn.addEventListener("click",randomWish);
+function kickBall(){football.classList.remove("kick");void football.offsetWidth;football.classList.add("kick");setTimeout(()=>football.classList.remove("kick"),1000)}ballBtn.addEventListener("click",kickBall);football.addEventListener("click",kickBall);
